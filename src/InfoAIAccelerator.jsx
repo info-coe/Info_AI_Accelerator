@@ -2,6 +2,7 @@ import React from "react";
 import AI1 from "./Images/AI1.jpg";
 import AI2 from "./Images/AI2.jpg";
 import AI3 from "./Images/AI3.jpg";
+import AIBanner from "./Images/AIBanner.jpg"
 
 export default function InfoAIAccelerator() {
   const infoAIAcceleratorFeatures = [
@@ -60,9 +61,10 @@ export default function InfoAIAccelerator() {
 
   return (
     <div className="container">
-      <div className="shadow rounded p-3 mt-3 mb-3" style={{backgroundColor:"lightgray"}}>
+      <div className="shadow rounded p-3 mt-5 mb-3">
         <h1 className="text-center">Info AI Accelerator</h1>
-        <div className="fs-6">
+        <div className="row align-items-center">
+        <div className="col-md-9">
           <p>
             Info AI Accelerator is a revolutionary platform that simplifies the
             training, building, and testing of Large Language Models (LLMs).
@@ -80,31 +82,69 @@ export default function InfoAIAccelerator() {
             their LLM workflows.
           </p>
         </div>
+        <div className="text-center col-md-3" style={{  }}>
+          <img src={AIBanner} alt="Services" width="300" height="300" />
+        </div>
+        </div>
+       
       </div>
-      <div>
+      <div className="mt-5">
         <h2>Features</h2>
-        <div className="grid-container">
+        {/* <div className="grid-container">
           {infoAIAcceleratorFeatures.map((item, index) => (
-            <div key={index} className="grid-item border m-2 p-3">
+            <div key={index} className="card border m-2 p-3">
               <h4 className="text-center">{item.title}</h4>
               <p>{item.description}</p>
             </div>
           ))}
+        </div> */}
+    <div className="container p-md-5 p-2">
+  <div className="row justify-content-center">
+    {infoAIAcceleratorFeatures.map((item, index) => (
+      <div key={index} className="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center mb-4 p-2">
+        <div className="card custom-card border p-3">
+          <h4 className="text-center">{item.title}</h4>
+          <p>{item.description}</p>
         </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+
+
+
+
+
       </div>
       <div>
         <h2>Our Services</h2>
-        <div className="grid-container">
+        {/* <div className="grid-container">
           {infoAIAcceleratorServices.map((item, index) => (
-            <div key={index} className="grid-item shadow m-2 p-3">
-              <div className="" style={{ height: "56%" }}>
-                <img src={item.image} alt="Services" width="70%" />
+            <div key={index} className="card shadow m-2 p-3">
+              <div className="" style={{  }}>
+                <img src={item.image} alt="Services" width="300" height="300" />
               </div>
-              <h4 style={{ height: "17%" }}>{item.title}</h4>
+              <h4 style={{ }}>{item.title}</h4>
               <p>{item.description}</p>
             </div>
           ))}
+        </div> */}
+        <div className="container p-md-5 p-2">
+  <div className="row justify-content-center">
+    {infoAIAcceleratorServices.map((item, index) => (
+      <div key={index} className="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center mb-4">
+        <div className="card custom-card border p-3">
+        <div className="text-center" style={{  }}>
+                <img src={item.image} alt="Services" width="300" height="300" />
+              </div>
+          <h4 className="text-center">{item.title}</h4>
+          <p>{item.description}</p>
         </div>
+      </div>
+    ))}
+  </div>
+</div>
       </div>
     </div>
   );

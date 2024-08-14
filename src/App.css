@@ -1,4 +1,4 @@
-/* Password eye icon start */
+Password eye icon start
 
 .toggle11 {
   background: none;
@@ -45,7 +45,7 @@
   flex-grow: 1;
 }
 
-.grid-container {
+/* .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
   padding: 10px;
@@ -54,9 +54,9 @@
   background-color: rgba(255, 255, 255, 0.8);
   width: 330px;
   text-align: center;
-}
+} */
 
-@media all and (max-width: 767px) and (orientation: portrait) {
+/* @media all and (max-width: 767px) and (orientation: portrait) {
   .grid-container {
     display: grid;
     grid-template-columns: auto;
@@ -77,14 +77,57 @@
     grid-template-columns: auto auto;
     padding: 10px;
   }
+} */
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 20px; /* Adjust the space between the cards */
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-@media all and (min-width: 992px) and (max-width: 1280px) and (orientation: portrait) {
-
+.custom-card {
+  width: 100%; /* Ensures card takes full width of the column */
+  max-width: 300px; /* Optional: To cap the width */
+  height: 350px; /* Force a fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box; /* Include padding and border in height/width */
 }
-@media all and (min-width: 992px) and (max-width: 1280px) and (orientation: landscape) {
 
+.custom-card h4, .custom-card p {
+  margin: 0;
+  padding: 10px;
+  flex-shrink: 0;
 }
-@media all and (min-width: 1281px) and (max-width: 1600px) and (orientation: landscape) {
 
+.custom-card p {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* 1 card per row on mobile devices */
+  }
 }
