@@ -1,10 +1,9 @@
 import React from "react";
-import RegisterModal from "./Register";
 import "bootstrap/dist/css/bootstrap.min.css";
 import InfoAIAccelerator from "./InfoAIAccelerator";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import "./App.css"
+import "./App.css";
 
 const App = () => {
   return (
@@ -12,7 +11,6 @@ const App = () => {
       <Navbar/>
       <InfoAIAccelerator/>
       <Footer/>
-      <RegisterModal/>
     </div>
   );
 };
